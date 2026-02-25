@@ -1,0 +1,78 @@
+.card-img-top {
+  width: 100%;
+  height: auto !important;         
+  object-fit: contain;      
+  object-position: center;
+  background-color: #f8f9fa;
+  display: block;
+}
+
+.pagination-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  gap: 0.25rem;
+}
+
+.pagination .page-link {
+  border-radius: 10px;
+  border: 1px solid var(--bg-color-button-secondary);
+  background-color: transparent;
+
+  color: var(--text-color-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  min-width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover discreto */
+.pagination .page-link:hover {
+  background-color: var(--bg-color-button-secondary);
+  color: var(--text-color-secondary);
+}
+
+/* Ativo */
+.pagination .page-item.active .page-link {
+  background-color: var(--bg-color-button);
+  color: var(--text-color);
+  border-color: var(--bg-color-button);
+}
+
+/* Disabled */
+.pagination .page-item.disabled .page-link {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Status */
+.pagination-container small {
+  font-size: 0.85rem;
+  color: var(--bg-color-text);
+}
+
+
+@media (max-width: 768px) {
+  .pagination {
+    gap: 0.5rem;
+  }
+
+  .pagination .page-link {
+    min-width: 120px;
+    height: 44px;
+    font-size: 0.9rem;
+  }
+}
+
+
+

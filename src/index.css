@@ -1,0 +1,323 @@
+/* ============================================================
+   RESET GLOBAL - Remove padrões do navegador
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   VARIÁVEIS CSS (CORES E TEMA) - Centraliza o design do projeto
+   ============================================================ */
+:root {
+  /* Navbar */
+  --bg-color-navbar: linear-gradient(90deg, #4a077c, #6a0dad);
+  --text-color-links: #dec9e7;
+  --text-color-links-hover: #09cdd7;
+  --text-color-links-active: #09cdd7;
+
+  /* Botões */
+  --bg-color-button: #c77dff;
+  --bg-color-button-hover: #8f3ecf;
+  --text-color: #ffffff;
+
+  --bg-color-button-secondary: #dec9e7;
+  --bg-color-button-hover-secondary: #c7b2da;
+  --text-color-secondary: #6a0dad;
+
+  /* Tipografia */
+  --bg-color-title: #6a0dad;
+  --color-title-secondary: #c77dff;
+  --bg-color-title-section: #6a0dad;
+  --bg-color-title-cards: #6a0dad;
+  --bg-color-text: #4a3f55;
+
+  /* Scroll */
+  --bg-color-scroll: #dec9e7;
+  --bg-color-scroll-left: #6a0dad;
+  --bg-color-scroll-hover: #c77dff;
+
+  /* Footer */
+  --bg-color-footer: linear-gradient(90deg, #4a077c, #6a0dad);
+  --text-color-hover: #09cdd7;
+  --text-color-copy: #adb5bd;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+
+  /* Background com gradiente + grid */
+  background:
+    linear-gradient(to bottom, #f7f3ff 0%, #e8d9ff 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    40px 40px,
+    40px 40px;
+
+  background-size:
+    100% 100%,
+    48px 48px,
+    48px 48px;
+}
+
+/* ================= TIPOGRAFIA ================================ */
+h1 {
+  color: var(--bg-color-title);
+}
+h2 {
+  color: var(--bg-color-title-section);
+}
+h4 {
+  color: var(--color-title-secondary);
+}
+h5 {
+  color: var(--bg-color-title-cards);
+}
+p {
+  color: var(--bg-color-text);
+}
+
+/* ======================== NAVBAR ============================== */
+.navbar {
+  background: var(--bg-color-navbar);
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  padding: 0.5rem 1rem !important;
+  font-weight: 500;
+  color: var(--text-color-links);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-color-links-hover);
+}
+
+.nav-link.active {
+  color: var(--text-color-links-active) !important;
+}
+
+.menu-mobile {
+  background: var(--bg-color-navbar);
+}
+
+/* ====================== BOTÕES ================================ */
+.btn {
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  background-color: var(--bg-color-button);
+  color: var(--text-color-secondary);
+  transition: all 0.3s ease;
+}
+
+/* Botão secundário */
+.btn-outline-light {
+  background: var(--bg-color-button-secondary);
+  color: var(--text-color-secondary);
+}
+
+/* Remove efeitos de foco e clique do botão primário */
+.btn:not(.btn-outline-light),
+.btn:not(.btn-outline-light):focus,
+.btn:not(.btn-outline-light):active,
+.show > .btn:not(.btn-outline-light) {
+  background-color: var(--bg-color-button) !important;
+  color: var(--text-color) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Hover botão primário */
+.btn:not(.btn-outline-light):hover {
+  background-color: var(--bg-color-button-hover) !important;
+
+}
+
+/* Hover botão secundário */
+.btn-outline-light:hover {
+  background: var(--bg-color-button-hover-secondary) !important;
+  color: var(--text-color-secondary);
+}
+
+/* Apenas para dropdown dentro da navbar no mobile */
+@media (max-width: 991px) {
+  .navbar .dropdown-menu[data-bs-popper] {
+    right: auto !important;
+    left: 0 !important;
+  }
+}
+
+/* =================== FOOTER =============================== */
+footer {
+  background: var(--bg-color-footer);
+}
+
+footer a:hover {
+  color: var(--text-color-hover) !important;
+}
+
+.social-links a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+}
+
+.copy {
+  color: var(--text-color-copy);
+}
+
+/* ================== ANIMAÇÕES ============================= */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====================== SPINNER =================================== */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.spinner-logo {
+  width: 60px;
+  height: 60px;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================CARDS DE TRILHAS ======================================== */
+.trilha-card {
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.trilha-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.trilha-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.trilha-card .badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.trilha-card .progress {
+  height: 8px;
+  border-radius: 10px;
+}
+
+/* ============================== SCROLLBAR ==================================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color-scroll);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color-scroll-left);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color-scroll-hover);
+}
+
+/* ======================== RESPONSIVIDADE ================================ */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0 !important;
+    min-height: auto;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .stat-card h3 {
+    font-size: 2rem;
+  }
+
+  .step-card {
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+
+/* ================= BOTÃO DE EVENTO ================= */
+
+.event-action-btn {
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+/* 🟢 Inscrever-se */
+.btn.event-action-btn.is-subscribe {
+  background-color: var(--bg-color-button) !important;
+  color: var(--text-color) !important;
+}
+
+.btn.event-action-btn.is-subscribe:hover {
+  background-color: var(--bg-color-button-hover) !important;
+}
+
+/* 🔴 Cancelar */
+.btn.event-action-btn.is-cancel {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.btn.event-action-btn.is-cancel:hover {
+  background-color: #bb2d3b !important;
+}

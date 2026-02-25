@@ -1,0 +1,250 @@
+/* ----- Hero Section ----- */
+.hero-section {
+/* background: linear-gradient(
+  to bottom,
+  #f5eaff 0%,
+  #e5caff 40%,
+  #d3a6ff 100%
+); */
+
+background: radial-gradient(
+  circle at center,
+  #ffffff 0%,
+  #f3e6ff 40%,
+  #dcb7ff 100%
+);
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-header{
+  background: radial-gradient(
+  circle at center,
+  #ffffff 0%,
+  #f3e6ff 40%,
+  #dcb7ff 100%
+);
+
+}
+
+.animate-fade-in {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----- Estatísticas ----- */
+.stats-section {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.stat-card-home {
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-card-home:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card-home h3 {
+  font-size: 2.5rem;
+}
+.stats {
+  color: #FF329E;
+}
+.stats-one {
+  color: #F9C206;
+}
+.stats-three {
+  color: #6D107B;
+}
+.stats-for {
+  color: #A8CF45;
+}
+
+.bgbutton {
+  background-color: #764ba2;
+}
+.coloricon {
+  color: #dec9e7;
+}
+
+/* ----- Sobre a Rede NAVE ----- */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* ----- Como Funciona ----- */
+.step-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: yellow;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.iconcolor {
+  color: #764ba2;
+}
+
+.heroincolor {
+  color: white;
+  background-color: #09cdd7;
+}
+
+/* ----- Próximos Eventos ----- */
+.event-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.event-date {
+  background: black;
+  color: rgb(220, 9, 9);
+  padding: 1rem;
+  text-align: center;
+  min-width: 80px;
+}
+
+.event-date .day {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+  line-height: 1;
+}
+
+.event-date .month {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.avacolor {
+  color: #ffffff;
+  background-color: #09cdd7;
+}
+.bg-badge {
+  background-color: #09cdd7;
+}
+.title-color{
+    color: #6a0dad;
+}
+/* ----- cores dos botões inscrever e cancelar ----- */
+.event-action-btn.is-cancel {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.event-action-btn.is-subscribe {
+  background-color: transparent !important;
+  border-color: #0d6efd !important;
+  color: #0d6efd !important;
+}
+
+.event-action-btn.is-subscribe:hover {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+}
+
+/* ----- Depoimentos ----- */
+.testimonial-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.rating i {
+  font-size: 1.1rem;
+}
+
+/* ----- Call to Action ----- */
+.cta-section {
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+  background-size: 50px 50px;
+}
+
+.cta-section .container {
+  position: relative;
+  z-index: 1;
+}

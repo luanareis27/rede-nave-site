@@ -1,0 +1,639 @@
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.nav-profile-img,
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-profile-img.initials,
+.profile-img.initials {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.nav-profile-img img,
+.profile-img img {
+  background: transparent;
+}
+
+.separator {
+  display: none; 
+}
+
+@media (max-width: 991.98px) {
+  .separator {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 12px 0;
+
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+  }
+}
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+
+.dashboard-sidebar {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  position: sticky;
+  top: 100px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.stat-box {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.progress-ring {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+
+.menu-item {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: linear-gradient(90deg, #4a077c, #6a0dad);
+  color: white;
+  transform: translateX(5px);
+}
+
+.menu-item.active {
+  background: linear-gradient(90deg, #4a077c, #6a0dad);
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .dashboard-sidebar {
+    display: none;
+  }
+}
+
+/* =====================================================
+   SETTINGS
+   ===================================================== */
+
+/* -------- Config -------- */
+.dashboard-section {
+  padding: 2rem;
+  background: linear-gradient(180deg, #f8f9fc 0%, #f1f3f9 100%);
+  min-height: 100vh;
+}
+
+.dashboard-section h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+.dashboard-section h4 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  letter-spacing: -0.3px;
+}
+
+/* -------- My profile -------- */
+
+.profile-card {
+  border-radius: 16px;
+  background: #fff;
+  border: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.avatar-overlay i {
+  color: #fff;
+  font-size: 26px;
+}
+
+.profile-avatar:hover .avatar-overlay {
+  opacity: 1;
+}
+
+.profile-input {
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  padding: 12px;
+}
+
+.nav-profile-img,
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  font-size: 32px;
+}
+
+.nav-profile-img.initials,
+.profile-img.initials {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.nav-profile-img img,
+.profile-img img {
+  background: transparent;
+}
+
+
+/* Crop ajuste da foto */
+.crop-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.crop-modal {
+  width: 420px;
+  max-width: 92%;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.crop-title {
+  display: flex;
+  padding: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  justify-content: center;
+}
+
+.crop-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #000;
+}
+
+.crop-controls {
+  padding: 16px;
+}
+
+.crop-controls input[type="range"] {
+  width: 100%;
+}
+
+.crop-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .crop-container {
+    height: 240px;
+  }
+
+  .crop-modal {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+
+/* ============================
+   FOTO DE PERFIL
+============================ */
+.profile-photo-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #e5e7eb;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================
+   MENU DE OPÇÕES
+============================ */
+.photo-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 998;
+}
+
+.photo-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  overflow: hidden;
+}
+
+.photo-menu-item {
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.photo-menu-item:hover {
+  background: #f3f4f6;
+}
+
+.photo-menu-item.text-danger {
+  color: #dc2626;
+}
+
+/* ============================
+   PREVIEW DA FOTO
+============================ */
+.photo-preview-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 998;
+}
+
+.photo-preview-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-preview-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================
+   CROP MODAL (AJUSTE FINO)
+============================ */
+.crop-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crop-modal {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  padding: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.crop-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.crop-container {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.crop-controls {
+  margin-top: 16px;
+}
+
+.crop-controls input[type="range"] {
+  width: 100%;
+}
+
+.crop-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.crop-actions .btn {
+  flex: 1;
+}
+
+/* =====================================================
+   DASHBOARD - OVERVIEW
+   ===================================================== */
+
+/* -------- Estatísticas -------- */
+
+/* -------- Continue Aprendendo -------- */
+
+.continue-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-radius: 20px;
+  background: #fff;
+}
+.continue-left {
+  flex: 1;
+}
+.continue-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-left: 24px;
+}
+.continue-content {
+  display: flex;
+  flex-direction: column;
+}
+.continue-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.continue-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+.continue-info h5 {
+  color: #2d1a4a;
+}
+.continue-progress {
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+.continue-progress .progress-bar {
+  border-radius: 10px;
+}
+.continue-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.progress-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: #e5e7eb;
+}
+.continue-btn {
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, #4a077c, #6a0dad);
+}
+.progress-circle span {
+  background: #fff;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-muted {
+  color: #6b7280 !important;
+}
+
+/* -------- Certificados -------- */
+
+.certificate-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08), 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.certificate-card h6 {
+  font-size: 0.95rem;
+}
+
+.certificate-card .btn {
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+}
+
+
+/* =====================================================
+   DASHBOARD - COURSES
+   ===================================================== */
+
+  .dashboard-courses {
+  background: #f6f4fb;
+  padding: 32px;
+  min-height: 100vh;
+}
+.order-select {
+  max-width: 220px;
+  border-radius: 12px;
+}
+.courses-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  border: none;
+  background: #ede9fb;
+  color: #5b3cc4;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.filter-btn:hover {
+  background: #dcd3f8;
+}
+.filter-btn.active {
+  background: linear-gradient(90deg, #4a077c, #6a0dad);
+  color: #fff;
+}
+.filter-btn .badge {
+  background: #ffc107;
+  color: #000;
+  margin-left: 6px;
+}
+.search-input {
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+.course-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+.course-image {
+  height: 140px;
+  background: linear-gradient(135deg, #6f42c1, #a855f7);
+}
+.course-content {
+  padding: 20px;
+}
+.course-content h5 {
+  color: #2d1a4a;
+}
+.course-footer {
+  margin-top: 12px;
+}
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background-color: #eee;
+}
+.progress-bar {
+  border-radius: 10px;
+}
+
+/* =====================================================
+   DASHBOARD - CERTIFICADO
+   ===================================================== */

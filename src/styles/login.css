@@ -1,0 +1,243 @@
+/* =====================================================
+   LOGIN
+   ===================================================== */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.login-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.login-image {
+  background: linear-gradient(
+    90deg,
+    #4a077c,
+    #6a0dad
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.login-form {
+  padding: 3rem;
+}
+
+.social-login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.social-login-btn:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #6a0dad !important;    /* roxo */
+  box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25) !important;
+}
+
+.form-check-input:focus {
+  border-color: #6a0dad !important;
+  box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25) !important;
+}
+
+.form-check-input:checked {
+  background-color: #6a0dad !important;
+  border-color: #6a0dad !important;
+}
+
+.bg-text{
+  color: #4a077c;
+}
+
+
+/* =====================================================
+   RECUPERAR SENHA
+   ===================================================== */
+
+.forgot-container {
+    background:
+    linear-gradient(to bottom, #f7f3ff 0%, #e8d9ff 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+
+background-size: 100% 100%, 48px 48px, 48px 48px;
+}
+
+.forgot-card {
+  background: #ffffff;
+  padding: 40px 32px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  animation: fadeUp 0.6s ease;
+}
+
+.forgot-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #4a077c;
+}
+
+.forgot-card p {
+  font-size: 15px;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.forgot-input {
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.forgot-input:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.25);
+}
+
+.forgot-btn {
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #6a0dad, #b57bff);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.forgot-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(106, 13, 173, 0.35);
+}
+
+.forgot-footer a {
+  font-size: 14px;
+  color: #6a0dad;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forgot-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .forgot-card {
+    padding: 32px 24px;
+  }
+
+  .forgot-card h2 {
+    font-size: 22px;
+  }
+}
+
+/* =====================================================
+   REDEFINIR SENHA
+   ===================================================== */
+
+.new-password-card {
+  background: #ffffff;
+  padding: 40px 32px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeUp 0.4s ease;
+  text-align: center;
+}
+
+.new-password-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #4a077c;
+}
+
+.new-password-card p {
+  font-size: 15px;
+  color: #6c757d;
+}
+
+.new-password-input {
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.new-password-input:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.25);
+}
+
+.new-password-btn {
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #6a0dad, #b57bff);
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+
+.new-password-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(106, 13, 173, 0.35);
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .new-password-card {
+    padding: 32px 24px;
+  }
+
+  .new-password-card h2 {
+    font-size: 22px;
+  }
+}
+
+
+
+
+
+

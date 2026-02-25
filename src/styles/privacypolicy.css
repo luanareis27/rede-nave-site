@@ -1,0 +1,72 @@
+
+
+.politica-section {
+  background: var(--bg-color-scroll); /* tom claro lilás (#DEC9E7) */
+  padding: 60px 20px;
+}
+
+.container-politica {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  border-left: 6px solid var(--bg-color-title); /* #6A0DAD */
+}
+
+.politica-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--bg-color-title);
+  margin-bottom: 5px;
+}
+
+.politica-update {
+  font-size: 0.9rem;
+  color: var(--bg-color-text);
+  margin-bottom: 30px;
+}
+
+.politica-content p,
+.politica-content li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--bg-color-text); /* #4A3F55 */
+  margin-bottom: 20px;
+}
+
+.politica-content h2,
+.politica-content h3 {
+  color: var(--bg-color-title-section); /* #C77DFF */
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Destaque para termos importantes */
+.politica-content strong {
+  color: var(--bg-color-title-cards); /* #6FBF73 */
+  font-weight: 700;
+}
+
+/* Links */
+.politica-content a {
+  color: var(--text-color-links);
+  text-decoration: underline;
+}
+
+.politica-content a:hover {
+  color: var(--text-color-links-hover);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container-politica {
+    padding: 25px 20px;
+  }
+
+  .politica-title {
+    font-size: 1.6rem;
+  }
+}

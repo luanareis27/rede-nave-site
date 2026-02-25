@@ -1,0 +1,98 @@
+
+
+/* cor de fundo dos cards */
+/* .bg-card{
+  background-color: rgba(0, 0, 0, 0.0);
+} */
+
+/* Seção de Busca Rápida */
+.custom-focus {
+  border-color: #6a0dad !important; 
+}
+
+.custom-focus:focus {
+  border-color: #6a0dad; 
+  box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.35); 
+  outline: none;
+}
+.custom-txt{
+  color: #4a077c;
+}
+
+
+/* Canais de Atendimento */
+.bg-wpp{
+  color: rgb(8, 186, 8);
+}
+.bg-email{
+  color: rgb(198, 18, 18);
+}
+.bg-phone{
+  color: rgb(245, 245, 20);
+}
+
+/* FAQ Section */
+
+/* Estado padrão */
+.accordion-button {
+  background-color: #c77dff !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+.bg-accordion{
+  background: (179, 0, 255, 0.12);
+}
+.accordion-button-secondary {
+  background-color: #fff !important;
+  color: #55443f !important;
+  box-shadow: none !important;
+}
+
+/* Quando o item está aberto (não collapsed) */
+.accordion-button:not(.collapsed) {
+  background-color: #6a0dad !important; 
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+
+
+/* Formulário de Contato */
+#contato .form-control:focus,
+#contato .form-select:focus {
+  border-color: #6a0dad !important;                 
+  box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.30) !important; 
+  outline: none;
+}
+
+#contato .form-check-input {
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#contato .form-check-input:focus {
+  border-color: #6a0dad !important;
+  box-shadow: 0 0 0 0.20rem rgba(106, 13, 173, 0.35) !important;
+  outline: none !important;
+}
+/* Marcado */
+#contato .form-check-input:checked {
+  background-color: #6a0dad !important; 
+  border-color: #6a0dad !important;
+}
+textarea {
+  resize: none !important;
+}
+
+
+/* Recursos Adicionais */
+.bg-doc{
+  color: rgb(8, 186, 8);
+}
+.bg-video{
+  color: rgb(198, 18, 18);
+}
+.bg-community{
+  color: rgb(245, 245, 20);
+}
+

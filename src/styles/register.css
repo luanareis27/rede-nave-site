@@ -1,0 +1,119 @@
+.cadastro-container {
+  min-height: 100vh;
+  padding: 3rem 0;
+}
+
+.cadastro-card {
+  background: white;
+  border-radius: 20px 20px 0 0; /* cima-esquerda | cima-direita | baixo-direita | baixo-esquerda */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  margin-bottom: 0 !important; /* Adicione esta linha */
+}
+
+.cadastro-card-two {
+  background: white;
+  border-radius: 0 0 20px 20px; /* cima-esquerda | cima-direita | baixo-direita | baixo-esquerda */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+}
+.bg-card-cad{
+  background: linear-gradient(
+    90deg,
+    #4a077c,
+    #6a0dad
+  );
+}
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #dee2e6;
+  z-index: -1;
+}
+
+.step:first-child::before {
+  left: 50%;
+}
+
+.step:last-child::before {
+  right: 50%;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dee2e6;
+  color: #6c757d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0.5rem;
+}
+
+.step.active .step-circle {
+  background: #6a0dad;
+  color: white;
+}
+
+.step.completed .step-circle {
+  background: #c77dff;
+  color: white;
+}
+
+.step small {
+  display: block;
+  position: relative;
+  z-index: 2;
+  background: white;
+  padding: 0 5px;
+}
+
+#cadastroForm .form-control:focus,
+#cadastroForm .form-select:focus {
+  border-color: #6a0dad !important;
+  box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25) !important;
+}
+
+
+#cadastroForm .form-check-input:focus {
+  border-color: #6a0dad !important;
+  box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25) !important;
+}
+
+#cadastroForm .form-check-input:checked {
+  background-color: #6a0dad !important;
+  border-color: #6a0dad !important;
+}
+
+#cadastroForm .form-check-input[type="radio"]:checked {
+  background-color: #6a0dad !important;
+  border-color: #6a0dad !important;
+}
+
+.bg-text{
+  color: #4a077c;
+}
+
+.info-alert{
+  background-color: #c3a1dd;
+}
